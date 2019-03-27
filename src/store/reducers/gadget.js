@@ -1,9 +1,11 @@
 import * as actionTypes from "../actions/actionTypes";
 
 const initialState = {
-  samsung: 3,
-  iphone: 2,
-  huawei: 1
+  gadgets: {
+    samsung: 3,
+    iphone: 2,
+    huawei: 1
+  }
 };
 
 const reducer = (state = initialState, action) => {
@@ -15,12 +17,18 @@ const reducer = (state = initialState, action) => {
     case actionTypes.ADD_TECHNOLOGY:
       return {
         ...state,
-        samsung: state.samsung + 1
+        gadgets: {
+          ...state.gadgets,
+          [action.techGadgetName]: state.gadgets[action.techGadgetName] + 1
+        }
       };
     case actionTypes.REMOVE_TECHNOLOGY:
       return {
         ...state,
-        samsung: state.samsung - 1
+        gadgets: {
+          ...state.gadgets,
+          [action.techGadgetName]: state.gadgets[action.techGadgetName] - 1
+        }
       };
     default:
       return state;

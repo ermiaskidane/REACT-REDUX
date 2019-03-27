@@ -6,14 +6,16 @@ export const fetchTech = () => {
   };
 };
 
-export const addTech = () => {
+export const addTech = techName => {
   return {
-    type: actionTypes.ADD_TECHNOLOGY
+    type: actionTypes.ADD_TECHNOLOGY,
+    techGadgetName: techName
   };
 };
 
-export const removeTech = () => {
+export const removeTech = techName => {
   return {
-    type: actionTypes.REMOVE_TECHNOLOGY
+    type: actionTypes.REMOVE_TECHNOLOGY,
+    techGadgetName: techName
   };
 };
