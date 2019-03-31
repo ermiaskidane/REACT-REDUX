@@ -16,6 +16,23 @@ const mobileOwner = props => {
       </ul>
     );
   });
+  
+  const fieldFormsRef = props.fieldForms.map(form => {
+  return Object.keys(form).map(forms => {
+    return (
+      <ul key={forms}>
+        <li>{form[forms].name}</li>
+        <li>{form[forms].email}</li>
+        <li>{form[forms].phoneNumber}</li>
+        <li>{form[forms].addressOne}</li>
+        <li>{form[forms].addressTwo}</li>
+        <li>{form[forms].postCode}</li>
+        <li>{form[forms].country}</li>
+        <li>{form[forms].message}</li>
+      </ul>
+    );
+  });
+})
 
   const backButton = () => {
     return props.history.goBack("/");
