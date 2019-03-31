@@ -1,0 +1,35 @@
+.MobileList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+}
+
+.MobileName {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.MobileNumber {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.GadgetWorld {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+}
+.headingOneGadget {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.GadgetButton {
+  grid-column: 3/-1;
+  grid-row: 1/2;
+  align-self: center;
+  justify-self: end;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 3rem;
+  margin-right: 1rem;
+}
