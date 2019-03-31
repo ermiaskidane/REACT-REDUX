@@ -60,7 +60,8 @@ const mobileOwner = props => {
 
 const mapStateToProps = state => {
   return {
-    mobileOwner: state.mobileOwner.owner
+    mobileOwner: state.mobileOwner.owner,
+    fieldForms: state.fieldForm.Data
   };
 };
 
