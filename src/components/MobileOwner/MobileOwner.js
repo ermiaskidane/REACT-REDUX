@@ -52,6 +52,8 @@ const mobileOwner = props => {
       {mapMobileOwner}
 
       <h1>Owners detail</h1>
+      
+      {fieldFormsRef}
     </div>
   );
 };
