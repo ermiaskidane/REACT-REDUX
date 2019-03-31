@@ -9,7 +9,6 @@ class Gadgets extends Component {
     this.props.history.push("/owner");
   };
   render() {
-    console.log(this.props.fieldForms);
     return (
       <div>
         <h1>gadgets from containers</h1>
