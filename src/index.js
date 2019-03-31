@@ -1,21 +1,38 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { createStore } from "redux";
+import { BrowserRouter } from "react-router-dom";
+import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import { Provider } from "react-redux";
+import thunk from "redux-thunk";
 
-import reducer from "./store/reducers/gadget";
+import gadgetReducer from "./store/reducers/gadget";
+import mobileOwnerReducer from "./store/reducers/mobileOwner";
+import fieldFormReducer from "./store/reducers/FieldForm";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-// const reducer = {
 
-// }
+const composeEnhancers =
+  process.env.NODE_ENV === "development"
+    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+    : null || compose;
 
-const store = createStore(reducer);
+const rootReducer = combineReducers({
+  gadget: gadgetReducer,
+  mobileOwner: mobileOwnerReducer,
+  fieldForm: fieldFormReducer
+});
+
+const store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(thunk))
+);
 
 const app = (
   <Provider store={store}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </Provider>
 );
 

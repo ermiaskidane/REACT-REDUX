@@ -5,14 +5,20 @@ import * as actionTypes from "../store/actions/actionTypes";
 import "./Gadgets.css";
 
 class Gadgets extends Component {
+  pushHandler = () => {
+    this.props.history.push("/owner");
+  };
   render() {
+    console.log(this.props.fieldForms);
     return (
       <div>
         <h1>gadgets from containers</h1>
+
         <Gadget
           mobile={this.props.techGadgets}
           add={this.props.OnAddTech}
           remove={this.props.OnRemoveTech}
+          push={this.pushHandler}
         />
       </div>
     );
@@ -21,7 +27,7 @@ class Gadgets extends Component {
 
 const mapStateToProps = state => {
   return {
-    techGadgets: state.gadgets
+    techGadgets: state.gadget.gadgets
   };
 };
 

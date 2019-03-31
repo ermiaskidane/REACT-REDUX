@@ -19,7 +19,13 @@ const gadget = props => {
   });
   return (
     <div>
-      <h1>Gadget world</h1>
+      <div className="GadgetWorld">
+        <h1 className="headingOneGadget">Gadget world</h1>
+        <button className="GadgetButton" onClick={props.push}>
+          next
+        </button>
+      </div>
+
       <div>{listMobile}</div>
     </div>
   );
