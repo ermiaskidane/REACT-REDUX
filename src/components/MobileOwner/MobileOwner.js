@@ -29,6 +29,7 @@ const mobileOwner = props => {
         <li>{form[forms].postCode}</li>
         <li>{form[forms].country}</li>
         <li>{form[forms].message}</li>
+        <li onClick={() => props.OnDeleteHandler(form.id)}>Delete</li>
       </ul>
     );
   });
