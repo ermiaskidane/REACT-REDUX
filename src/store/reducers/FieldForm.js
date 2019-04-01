@@ -7,6 +7,10 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.ADD_DETAIL:
+      const concatData = {
+        ...action.contactData,
+        id: new Date()
+      };
       return {
         ...state,
         Data: state.Data.concat(concatData)
