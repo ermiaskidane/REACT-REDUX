@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import * as actionTypes from "../../store/actions/actionTypes";
 
 const mobileOwner = props => {
   console.log(props);
