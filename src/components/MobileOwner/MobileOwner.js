@@ -20,7 +20,7 @@ const mobileOwner = props => {
   const fieldFormsRef = props.fieldForms.map(form => {
   return Object.keys(form).map(forms => {
     return (
-      <ul key={forms}>
+      <ul key={forms} style={styling}>
         <li>{form[forms].name}</li>
         <li>{form[forms].email}</li>
         <li>{form[forms].phoneNumber}</li>
