@@ -74,4 +74,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps)(mobileOwner);
+export default connect(mapStateToProps, mapDispatchToProps)(mobileOwner);
