@@ -67,4 +67,11 @@ const mapStateToProps = state => {
   };
 };
 
+const mapDispatchToProps = dispatch => {
+  return {
+    OnDeleteHandler: formId =>
+      dispatch({ type: actionTypes.DELETE_DETAILS, detailIndex: formId })
+  };
+};
+
 export default connect(mapStateToProps)(mobileOwner);
