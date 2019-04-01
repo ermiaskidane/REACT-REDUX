@@ -11,6 +11,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         Data: state.Data.concat(action.contactData)
       };
+    case actionTypes.DELETE_DETAILS:
+      return {
+        ...state,
+        Data: state.Data.filter(result => result.id !== action.detailIndex)
+      };
     default:
       return state;
   }
