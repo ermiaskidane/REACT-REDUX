@@ -6,3 +6,10 @@ export const fillSuccessful = formData => {
     contactData: formData
   };
 };
+
+export const removeDetail = indexDetail => {
+  return {
+    type: actionTypes.DELETE_DETAILS,
+    detailIndex: indexDetail
+  }
+}
