@@ -9,7 +9,7 @@ const reducer = (state = initialState, action) => {
     case actionTypes.ADD_DETAIL:
       return {
         ...state,
-        Data: state.Data.concat(action.contactData)
+        Data: state.Data.concat(concatData)
       };
     case actionTypes.DELETE_DETAILS:
       return {
